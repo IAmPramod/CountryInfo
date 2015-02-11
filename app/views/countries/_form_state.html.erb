@@ -1,0 +1,18 @@
+<%= form_for(@state) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :literacy %><br>
+    <%= f.text_field :literacy %>
+  </div>
+  <div class="field">
+    <%= f.label :country_id %><br>
+    <% options = options_from_collection_for_select(Country.all(), 'id', 'name') %>
+    <%= f.select :country_id, options %>
+  </div>
+  <div class="actions modal-footer">
+    <%= f.submit %>
+  </div>
+<% end %>

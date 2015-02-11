@@ -1,0 +1,22 @@
+<%= form_for(@city) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :population %><br>
+    <%= f.text_field :population %>
+  </div>
+  <div class="field">
+    <%= f.label :area %><br>
+    <%= f.text_field :area %>
+  </div>
+  <div class="field">
+    <%= f.label :state_id %><br>
+    <% options = options_from_collection_for_select(State.all(), 'id', 'name') %>
+    <%= f.select :state_id, options %>
+  </div>
+  <div class="actions modal-footer">
+    <%= f.submit %>
+  </div>
+<% end %>

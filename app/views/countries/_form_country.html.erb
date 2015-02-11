@@ -1,0 +1,17 @@
+<%= form_for(@country) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :currency %><br>
+    <%= f.text_field :currency %>
+  </div>
+  <div class="field">
+    <%= f.label :timezone %><br>
+    <%= f.text_field :timezone %>
+  </div>
+  <div class="actions modal-footer">
+    <%= f.submit %>
+  </div>
+<% end %>
